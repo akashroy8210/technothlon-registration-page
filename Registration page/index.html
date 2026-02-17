@@ -26,57 +26,69 @@
                 <button>info</button>
                 <h1>Student Registration Form</h1>
             </div>
-            <div class="student-1 student">
+            <div class="student-1 student active">
                 <h3>Student Information 1</h3>
-                <form action="">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                <form>
+                    <label for="student1-name">Name</label>
+                    <input type="text" name="student1-name" id="student1-name" placeholder="Enter your name">
                     <label for="DOB">Date of Birth</label>
-                    <input type="date" name="DOB" id="DOB">
-                    <label for="contact">Contact information</label>
-                    <input type="number" name="contact" id="contact">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                    <label for="confirm-email">Confirm Email</label>
-                    <input type="email" name="confirm-email" id="confirm-email">
-                    <label for="school">School</label>
-                    <input type="text" name="school" id="school">
-                    <select name="class" id="class">
+                    <input type="date" name="DOB" id="student1-DOB">
+                    <label for="student1-contact">Contact information</label>
+                    <input type="number" name="student1-contact" id="student1-contact">
+                    <label for="student1-email">Email</label>
+                    <input type="email" name="student1-email" id="student1-email">
+                    <label for="student1-confirm-email">Confirm Email</label>
+                    <input type="email" name="student1-confirm-email" id="student1-confirm-email">
+                    <label for="student1-school">School</label>
+                    <input type="text" name="student1-school" id="student1-school">
+                    <label for="student1-class">Class:</label>
+                    <select name="student1-class" id="student1-class">
                         <option value="selectclass">Select Class</option>
                         <option value="9th">9th</option>
                         <option value="10th">10th</option>
                         <option value="11th"> 11th</option>
                         <option value="12th">12th</option>
                     </select>
+                </form>
+                <div class="btn-div">
+                        <button onclick="nextStep()" class="btn btn-next">Next</button>
+                </div>
             </div>
             <div class="student-2 student">
-                <h3>Student Information 1</h3>
-                <form action="">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name">
-                    <label for="DOB">Date of Birth:</label>
-                    <input type="date" name="DOB" id="DOB">
-                    <label for="contact">Contact information:</label>
-                    <input type="number" name="contact" id="contact">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email">
-                    <label for="confirm-email">Confirm Email:</label>
-                    <input type="email" name="confirm-email" id="confirm-email">
-                    <label for="school">School:</label>
-                    <input type="text" name="school" id="school">
-                    <label for="class">Class:</label>
-                    <select name="class" id="class">
+                <h3>Student Information 2</h3>
+                <form>
+                    <label for="student2-name">Name:</label>
+                    <input type="text" name="student2-name" id="student2-name" placeholder="Enter your name">
+                    <label for="student2-DOB">Date of Birth:</label>
+                    <input type="date" name="student2-DOB" id="student2-DOB">
+                    <label for="student2-contact">Contact information:</label>
+                    <input type="number" name="student2-contact" id="student2-contact">
+                    <label for="student2-email">Email:</label>
+                    <input type="email" name="student2-email" id="student2-email">
+                    <label for="student2-confirm-email">Confirm Email:</label>
+                    <input type="email" name="student2-confirm-email" id="student2-confirm-email">
+                    <label for="student2-school">School:</label>
+                    <input type="text" name="student2-school" id="student2-school">
+                    <label for="student2-class">Class:</label>
+                    <select name="student2-class" id="student2-class">
                         <option value="selectclass">Select Class</option>
                         <option value="9th">9th</option>
                         <option value="10th">10th</option>
                         <option value="11th"> 11th</option>
                         <option value="12th">12th</option>
                     </select>
+
+                </form>
+                <div class="btn-div">
+                    <button onclick="nextStep()" class="btn btn-next">Next</button>
+
+                    <button onclick="prevStep()" class="btn btn-prev">Previous</button>
+                </div>
             </div>
-            <div class="team-info">
+            <div class=" student team-info">
                 <h3>Team Information</h3>
                 <form action="">
-                    <!-- <label for="squad">Choose your Squad:</label>
+                    <label for="squad">Choose your Squad:</label>
                     <select name="squad" id="squad">
                         <option value="Select Squad">Select Squad</option>
                         <option value="Juniors Squad">Junior squad</option>
@@ -89,11 +101,11 @@
                         <option value="Hindi">Hindi</option>
                     </select>
                     <label for="Country">Country:</label>
-                    <input type="text" name="Country" id="Country">
+                    <input class="full-width" type="text" name="Country" id="Country">
                     <label for="state">State:</label>
-                    <input type="text" name="state" id="state">
+                    <input class="full-width" type="text" name="state" id="state">
                     <label for="city">City:</label>
-                    <input type="text" name="city" id="city"> -->
+                    <input class="full-width" type="text" name="city" id="city">
                     <label for="advertise">How did you hear about Technothlon:</label>
                     <select name="advertise" id="advertise" required>
                         <option value="" disabled selected>Select an option</option>
@@ -107,19 +119,24 @@
                         <option value="local_event">Through a local event/workshop</option>
                         <option value="other">Other</option>
                     </select>
-                    <div class="terms-condition">
-                        <div class="terms">
-                            <input type="checkbox" name="terms" id="terms">
-                            <label for="terms">I have read the instructions carefully*</label>
-                        </div>
-                        <div class="terms">
-                            <input type="checkbox" name="confirm-details" id="confirm-details">
-                            <label for="confirm-details">I confirm my details (name, email) are correct and cannot be
-                                changed later *</label>
-                        </div>
-                    </div>
                 </form>
+                <div class="terms-condition">
+                    <div class="terms">
+                        <input type="checkbox" name="terms" id="terms">
+                        <label for="terms">I have read the instructions carefully*</label>
+                    </div>
+                    <div class="terms">
+                        <input type="checkbox" name="confirm-details" id="confirm-details">
+                        <label for="confirm-details">I confirm my details (name, email) are correct and cannot be
+                            changed later *</label>
+                    </div>
+                </div>
+                <div class="btn-div">
+                    <button onclick="nextStep()" class="btn btn-submit">Submit</button>
+                    <button onclick="prevStep()"class="btn btn-prev">Previous</button>
+                </div>
             </div>
+
         </div>
         <footer>
             <ul>
@@ -129,8 +146,7 @@
             </ul>
         </footer>
     </section>
-<script type="module" src="https://unpkg.com/ionicons@undefined/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@undefined/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
