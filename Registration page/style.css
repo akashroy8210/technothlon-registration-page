@@ -17,22 +17,25 @@
 }
 body{
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+}
+button{
+    cursor: pointer;
 }
 a{
     text-decoration: none;
     color: var(--link-color);
 }
-.student input,select{
+.student input,.student select{
     outline: none;
     border: none;
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
     font-size: 55%;
     background-color:#F7F5F5;
     border: 1px solid var(--input-outline-color);
     border-radius: 0.3rem;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
     margin-bottom: 1rem;
 }
 input:focus,
@@ -44,10 +47,17 @@ select:active{
 
 header{
     background-color: var(--header-background-color);
+    width: 100%;
+}
+nav{
     display: flex;
     justify-content: space-around;
-    padding: 3.5rem;
-    font-size: 70%;
+    align-items: center ;
+    width: 70%;
+    margin: auto;
+}
+header div img{
+    width: 16rem;
 }
 
 .reg-form-page{
@@ -57,10 +67,10 @@ header{
 }
 .cards{
     background-color: var(--card-background-color);
-    width: 70%;
+    width: 85%;
     margin: auto ;
     border: 1px solid var(--card-outline-color);
-    padding: 1rem 3rem;
+    padding: 1.5rem 2rem;
     border-radius: 0.8rem;
     color: var(--text-color);
     display: flex;
@@ -70,6 +80,7 @@ header{
     overflow: hidden;
     margin-bottom: 2rem;
     box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+     font-family:Montserrat;
 }
 .student{
     display: none;
@@ -78,14 +89,28 @@ header{
 
 }
 .card-head{
-    display: flex;
-    flex-direction: column;
+    display:grid ;
+    /* flex-direction: column; */
     text-align: center;
     align-items: center;
     gap: 1rem;
-    font-size: 70%;
+    font-size: 50%;
     margin-bottom: 1rem;
-
+}
+.btn-info{
+    float: left;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: none;
+    background-color: #FF8C3A;
+    padding: 0;
+    border-radius: 100%;
+    transform: scale(1);
+    transition: all 0.2s linear;
+}
+.btn-info:hover{
+    transform: scale(1.1);
+    background-color: #E65100;
 }
 .active{
     display: flex;
@@ -103,9 +128,11 @@ header{
 }
 .student h3,.team-info h3{
     background-color: var(--text-background-color);
-    padding: 0.5rem 1rem;
-    font-size: 75%;
-    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+    font-size: 65%;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    color: #000000;
 }
 
 label{
@@ -136,13 +163,20 @@ footer ul{
     align-items: center;
     align-content: center;
     padding: 1rem;
+    transition: border-bottom 2s ease;
 }
 footer ul li {
     list-style: none;
 }
+footer ul li a{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
 
 .btn{
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 0.2rem;
     width: 10%;
     float: right;
     margin-right: 1rem;
@@ -150,12 +184,14 @@ footer ul li {
     border: none;
     border-radius: 0.3rem;
     transition: background-color 0.4s ease;
-    cursor: pointer;
     color: white;
+    font-size: 65%;
+    font-weight: 400;
 }
 .btn:hover{
-    background-color: #fda52a;
+    background-color: #fda01d;
 }
+
 @keyframes fade{
       from{opacity:0; transform:translateX(30px)}
       to{opacity:1; transform:translateX(0)}
